@@ -1,0 +1,22 @@
+[tool.black]
+line-length = 120
+target-version = ["py38", "py39", "py310"]  # Specify Python versions
+skip-string-normalization = true
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 120
